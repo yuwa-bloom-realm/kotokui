@@ -161,6 +161,16 @@ textarea{min-height:120px}
 .done-body .strong{color:var(--washi)}
 .done-body .kin{color:var(--kin-soft)}
 .done-sign{margin-top:22px;font-size:.95rem;letter-spacing:.3em;color:var(--kin-soft)}
+.done-note{
+  margin-top:40px;max-width:380px;
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-size:.8rem;line-height:2;letter-spacing:.02em;
+  color:var(--washi-dim);
+  border-top:1px solid rgba(200,205,210,.12);
+  padding-top:22px;
+}
+.done-note .nz{color:var(--kin-soft)}
+.done-note .nz-dim{display:inline-block;margin-top:.6em;color:rgba(184,173,151,.7);font-size:.76rem;line-height:1.9}
 
 .embers{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
 .ember{position:absolute;width:4px;height:4px;border-radius:50%;background:radial-gradient(circle,var(--kin-soft),transparent 70%);opacity:0;animation:float linear infinite}
@@ -241,6 +251,11 @@ textarea{min-height:120px}
       <p class="kin">言葉に喰われるんじゃないよ。</p>
     </div>
     <div class="done-sign">――コトクイ</div>
+    <div class="done-note">
+      鑑定結果は <span class="nz">コトクイ</span> から、いただいたメールアドレスにお届けします。<br>
+      ひとつずつ順番に読んでいるので、<span class="nz">3日以内</span>を目安にお待ちください。<br>
+      <span class="nz-dim">迷惑メールやプロモーションのフォルダに振り分けられることがあります。届かないときは、そちらもご確認ください。</span>
+    </div>
   </section>
 </div>
 
