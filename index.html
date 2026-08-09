@@ -403,7 +403,7 @@ const STEPS = [
 
   // ======================= 共通ルート =======================
   {
-    key:"C1", type:"text",
+    key:"C1", type:"text", optional:true,
     dynamicText:(s)=> route(s)==="A"
       ? "その言葉によって、<br>今いちばん困っていることは何？"
       : "その気持ちによって、<br>今いちばん困っていることは何？",
@@ -586,7 +586,7 @@ function render(){
   }
   else if(step.type === "text"){
     const val = saved || '';
-    html += `<textarea class="textarea-deep" oninput="answers['${step.key}']=this.value" placeholder="${step.placeholder||''}">${escArea(val)}</textarea>`;
+    html += `<textarea class="textarea-deep" oninput="answers['${step.key}']=this.value; updateNext()" placeholder="${step.placeholder||''}">${escArea(val)}</textarea>`;
     if(step.subhint) html += `<div class="q-hint">${step.subhint}</div>`;
   }
   else if(step.type === "branchText"){
